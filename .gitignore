@@ -38,6 +38,9 @@ __screenshots__/
 # Vite
 *.timestamp-*-*.mjs
 
+# Wrangler
+.wrangler/
+
 # Claude Code
 .claude/
 .spec-workflow/

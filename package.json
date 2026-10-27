@@ -3,6 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "type": "module",
+  "packageManager": "pnpm@12.15.0",
   "scripts": {
     "dev": "vite",
     "build": "run-p type-check \"build-only {@}\" --",
@@ -13,7 +14,10 @@
     "lint": "run-s \"lint:*\"",
     "lint:oxlint": "oxlint . --fix",
     "lint:eslint": "eslint . --fix --cache",
-    "format": "prettier --write --experimental-cli src/"
+    "format": "prettier --write --experimental-cli src/",
+    "worker:dev": "wrangler dev",
+    "worker:deploy": "wrangler deploy",
+    "worker:check": "wrangler deploy --dry-run"
   },
   "dependencies": {
     "@aemeath-projects/trpg": "^1.0.2",
@@ -52,7 +56,8 @@
     "vitest": "^5.0.5",
     "vue-eslint-parser": "^10.4.1",
     "vue-tsc": "3.3.11",
-    "workbox-window": "^7.4.1"
+    "workbox-window": "^7.4.1",
+    "wrangler": "^4.153.0"
   },
   "engines": {
     "node": ">=26"

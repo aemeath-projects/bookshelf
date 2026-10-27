@@ -43,6 +43,26 @@ pnpm lint         # 代码检查
 pnpm type-check   # 类型检查
 ```
 
+## 部署
+
+站点以 Cloudflare Workers 静态资源（assets-only，无 Worker 脚本）形式托管，由 Workers Builds 从 `master` 分支构建。
+
+控制台配置：
+
+- Build command：`pnpm build`
+- Deploy command：`pnpm worker:deploy`
+- 构建变量：`VITE_S3_ENDPOINT`（与 `.env` 中同名，构建期注入；未配置时首页不提供远程日志入口）
+
+本地验证生产构建与路由回退：
+
+```bash
+pnpm build          # 先生成 dist/
+pnpm worker:check   # 校验 Wrangler 配置与资源目录
+pnpm worker:dev     # http://localhost:8787，按生产构建预览
+```
+
+`worker:dev` / `worker:check` 只读取 `dist/`，不会启动 Vite 开发服务器；日常开发仍用 `pnpm dev`。
+
 ## 技术栈
 
 - **框架**：Vue 3 + TypeScript + Vite

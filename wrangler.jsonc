@@ -1,0 +1,13 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "bookshelf",
+  "compatibility_date": "2026-10-22",
+  // 纯静态站点：不配置 main，也不使用 assets.binding，由 Workers 直接托管 dist/
+  "assets": {
+    "directory": "./dist",
+    // vue-router 使用 history 模式，未知路径需回退到 index.html
+    "not_found_handling": "single-page-application",
+  },
+  "workers_dev": true,
+  "preview_urls": true,
+}
