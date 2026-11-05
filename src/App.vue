@@ -15,7 +15,7 @@
           <v-btn
             icon="mdi-github"
             v-bind="props"
-            href="https://github.com/AkariRin/bookshelf"
+            href="https://github.com/aemeath-projects/bookshelf"
             target="_blank"
             rel="noopener"
           />

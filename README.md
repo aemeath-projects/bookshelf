@@ -2,7 +2,7 @@
 
 跑团日志阅读器。读取 [Aemeath TRPG Engine](https://github.com/aemeath-projects/trpg/) 生成的 `.story` 归档，在浏览器中渲染发言时间线、检定卡片与人物卡快照。
 
-![License](https://img.shields.io/github/license/AkariRin/bookshelf?style=for-the-badge)
+![License](https://img.shields.io/github/license/aemeath-projects/bookshelf?style=for-the-badge)
 
 ## 特性
 
